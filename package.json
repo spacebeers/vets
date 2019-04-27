@@ -1,0 +1,21 @@
+{
+  "name": "eastgrinsteadvets.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "gulp clean",
+    "start": "gulp --theme=egConfig && gulp --theme=crawleyConfig && gulp --theme=copthornConfig",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-less": "^3.0.0",
+    "gulp-replace": "^1.0.0",
+    "yargs": "^13.2.2"
+  }
+}
