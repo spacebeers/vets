@@ -1,12 +1,14 @@
 <?php
+    global $page;
+
     return (object) array(
         'target' => 'crawleyvetclinic.co.uk',
         'phone' => '01293 539898',
         'email' => 'evgh@hotmail.co.uk',
         'facebook' => '//www.facebook.com/eastgrinsteadvetcentre/',
         'name' => 'Crawley Veterinary Clinic',
-        'logo-top' => 'Crawley',
-        'logo-bottom' => 'Veterinary Clinic',
+        'logoTop' => 'Crawley',
+        'logoBottom' => 'Veterinary Clinic',
         'address' => ' 2 Forester Rd, Crawley RH10 6EQ',
         'monday' => '08:30 - 17:30 *',
         'tuesday' => '08:30 - 17:30 *',

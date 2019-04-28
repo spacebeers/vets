@@ -1,12 +1,14 @@
 <?php
+    global $page;
+
     return (object) array(
         'target' => 'copthornevetclinic.co.uk',
         'phone' => '01342 713957',
         'email' => 'evgh@hotmail.co.uk',
         'facebook' => '//www.facebook.com/eastgrinsteadvetcentre/',
         'name' => 'Copthorne Veterinary Clinic',
-        'logo-top' => 'Copthorne',
-        'logo-bottom' => 'Veterinary Clinic',
+        'logoTop' => 'Copthorne',
+        'logoBottom' => 'Veterinary Clinic',
         'address' => 'Church Rd, Copthorne RH10 3RA',
         'monday' => '08:30 - 17:30 *',
         'tuesday' => '08:30 - 17:30 *',

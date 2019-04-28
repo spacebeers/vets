@@ -4,6 +4,7 @@
 
 @palette-primary-dark: darken(@palette-primary, 10%);
 @palette-body: #4A4A4A;
+@palette-dark: #000000;
 @palette-mid: #EBEBEB;
 @palette-light: #D8D8D8;
 @palette-lightest: white;
@@ -37,6 +38,39 @@ header {
     border-bottom: 5px solid @palette-primary;
     @media (min-width: @screen-sm-min) {
         border-bottom: none;
+    }
+}
+
+.navigation {
+    margin-bottom: 25px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0 3.5rem;
+
+            ul {
+                display: none;
+            }
+        }
+
+        a {
+            color: @palette-body;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+
+        .selected {
+            a {
+                color: @palette-primary;
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -259,6 +293,36 @@ header {
         max-height: 70vh;
     }
 
+    &.hero-small {
+        max-height: 25vh;
+        height: 25vh;
+        position: relative;
+
+        &::before {
+            content: "";
+            background: fade(@palette-dark, 35%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: @palette-lightest;
+            margin: 0;
+            padding: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -285,6 +349,16 @@ h1 {
     .header-dash();
 }
 
+h2 {
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    @media (min-width: @screen-sm-min) {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }
+    .header-dash();
+}
+
 a {
     color: @palette-primary;
     text-decoration: none;
@@ -293,6 +367,13 @@ a {
 
     &:hover {
         opacity: 0.7;
+    }
+}
+
+p {
+    &:first-of-type {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
     }
 }
 

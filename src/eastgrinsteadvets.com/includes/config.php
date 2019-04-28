@@ -1,4 +1,6 @@
 <?php
+    global $page;
+
     return (object) array(
         'target' => 'eastgrinsteadvets.com',
         'phone' => '01342 323072',
