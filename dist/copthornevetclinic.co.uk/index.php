@@ -17,46 +17,46 @@
         </section>
         <section class="content strip">
             <div class="container">
-                <h1>Welcome to our practice</h1>
+                <div class="constrainer">
+                    <h1>Welcome to our practice</h1>
 
-                <p>Our well-equipped Independent clinics provide a friendly, caring and compassionate veterinary service to East Grinstead, Copthorne, Crawley and surrounding areas.</p>
+                    <p>Our well-equipped Independent clinics provide a friendly, caring and compassionate veterinary service to East Grinstead, Copthorne, Crawley and surrounding areas.</p>
 
-                <p>Great personal care for all yours pets, including dogs, cats, small mammals, poultry and also for wildlife.</p>
+                    <p>Great personal care for all yours pets, including dogs, cats, small mammals, poultry and also for wildlife.</p>
 
-                <p>The Vets at the East Grinstead Veterinary Hospital aim to practise the very highest standard of medicine and surgery. We undertake a wide variety of clinical procedures to both help us make a diagnosis, and then treat any problems we find.</p>
+                    <p>The Vets at the East Grinstead Veterinary Hospital aim to practise the very highest standard of medicine and surgery. We undertake a wide variety of clinical procedures to both help us make a diagnosis, and then treat any problems we find.</p>
 
-                <p>With more than 65 years experience between them, the vets have a wide range of particular interests and skills, including; orthopaedic and soft-tissue surgery, clinical diagnostic medicine, ultrasonography, endoscopy and clinical laboratory medicine.</p>
+                    <p>With more than 65 years experience between them, the vets have a wide range of particular interests and skills, including; orthopaedic and soft-tissue surgery, clinical diagnostic medicine, ultrasonography, endoscopy and clinical laboratory medicine.</p>
+                </div>
             </div>
         </section>
-        <section class="content strip">
+        <section class="content strip strip-dark">
             <div class="container">
-                <h2>Services</h2>
+                <div class="constrainer">
+                    <h2>Services</h2>
 
-                <ul>
-                    <li>4 Weeks Free Pet Insurance</li>
-                    <li>In House Laboratory</li>
-                    <li>Dental Fac Plus Dental Xray</li>
-                    <li>Full Surgical Facilities</li>
-                    <li>Orthopeadic Surgeon</li>
-                    <li>Ultra Sound</li>
-                    <li>Digital Xray</li>
-                    <li>Endoscopes</li>
-                    <li>Massage Therapist</li>
-                    <li>Nurses Clinics</li>
-                    <li>Weight Clinics</li>
-                    <li>Full Range Of Diet</li>
-                </ul>
-                <p>Our out of hours emergencies are covered by the referral centre in godstone who are specialist in
-                emergency medicine. (your call will be automatically be diverted to the out of hours service)
-                </p>
+                    <ul class="services-list">
+                        <li>4 Weeks Free Pet Insurance</li>
+                        <li>In House Laboratory</li>
+                        <li>Dental Fac Plus Dental Xray</li>
+                        <li>Full Surgical Facilities</li>
+                        <li>Orthopeadic Surgeon</li>
+                        <li>Ultra Sound</li>
+                        <li>Digital Xray</li>
+                        <li>Endoscopes</li>
+                        <li>Massage Therapist</li>
+                        <li>Nurses Clinics</li>
+                        <li>Weight Clinics</li>
+                        <li>Full Range Of Diet</li>
+                    </ul>
+                    <p class="small">Our out of hours emergencies are covered by the referral centre in godstone who are specialist in
+                    emergency medicine. (your call will be automatically be diverted to the out of hours service)
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section class="content strip">
-            <h2>Find us</h2>
-
-            MAP!
-        </section>
+        <?php include('includes/map.php') ?>
 
         <?php include('includes/branches.php') ?>
 

@@ -18,6 +18,7 @@
         'saturday' => '08:00 - 12:00',
         'sunday' => 'Closed',
         'notes' => '',
-        'trackingID' => 'UA-3539496-11'
+        'trackingID' => 'UA-3539496-11',
+        'mapCode' => '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ23A2Gzf2dUgR9XORWSf6a44&key=AIzaSyDH5KvEg6W2kZcjj4FI3_8bQvRIUiKQQII" allowfullscreen></iframe>'
     );
 ?>

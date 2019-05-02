@@ -39,6 +39,16 @@ header {
     border-bottom: none;
   }
 }
+.constrainer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .constrainer {
+    width: 75%;
+  }
+}
 .navigation {
   margin-bottom: 25px;
 }
@@ -72,6 +82,15 @@ header {
 }
 .strip {
   padding: 45px 0 50px 0;
+}
+.strip.strip-dark {
+  background: #F9F8FA;
+}
+.strip.strip-dark h1,
+.strip.strip-dark h2,
+.strip.strip-dark h3,
+.strip.strip-dark h4 {
+  color: #4A4A4A;
 }
 .logo {
   font-family: 'Libre Baskerville', serif;
@@ -259,12 +278,15 @@ header {
 .opening-times-list em {
   font-size: 1.4rem;
 }
+.map iframe {
+  width: 100%;
+}
 .hero {
   max-height: 25vh;
 }
 @media (min-width: 768px) {
   .hero {
-    max-height: 70vh;
+    max-height: 60vh;
   }
 }
 .hero.hero-small {
@@ -297,6 +319,67 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 768px) {
+  .branches {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .branches .branch {
+    flex: 0 0 30%;
+  }
+}
+.branches .branch ul {
+  list-style: none;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .form-section {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.form-section .form {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .form-section .form {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+}
+.form-section .details {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .form-section .details {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+.form-section .form-control {
+  margin: 0 0 20px 0;
+}
+.form-section label {
+  display: block;
+}
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 15px;
+}
+.services-list {
+  column-count: 2;
+  column-gap: 40px;
+  margin: 0 auto;
+  padding-left: 0;
+  display: inline-block;
+  width: 80%;
+}
+.services-list li {
+  text-align: left;
 }
 h1,
 h2,
@@ -364,4 +447,8 @@ a:hover {
 p:first-of-type {
   font-size: 2.4rem;
   line-height: 2.9rem;
+}
+p.small {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }

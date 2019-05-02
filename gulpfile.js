@@ -33,7 +33,10 @@ gulp.task('partials', function () {
 });
 
 gulp.task('config', function () {
-  gulp.src([`./src/${theme.target}/includes/config.php`])
+  gulp.src([
+      `./src/${theme.target}/includes/config.php`,
+      './src/includes/*.php'
+    ])
     .pipe(gulp.dest(`./dist/${theme.target}/includes`));
 });
 

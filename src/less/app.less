@@ -41,6 +41,16 @@ header {
     }
 }
 
+.constrainer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: @screen-sm-min) {
+        width: 75%;
+    }
+}
+
 .navigation {
     margin-bottom: 25px;
 
@@ -83,6 +93,14 @@ header {
 
 .strip {
     padding: 45px 0 50px 0;
+
+    &.strip-dark {
+        background: #F9F8FA;
+
+        h1, h2, h3, h4 {
+            color: @palette-body;
+        }
+    }
 }
 
 .logo {
@@ -287,10 +305,16 @@ header {
     }
 }
 
+.map {
+    iframe {
+        width: 100%;
+    }
+}
+
 .hero {
     max-height: 25vh;
     @media (min-width: @screen-sm-min) {
-        max-height: 70vh;
+        max-height: 60vh;
     }
 
     &.hero-small {
@@ -330,6 +354,79 @@ header {
     }
 }
 
+// Branches
+
+.branches {
+    @media (min-width: @screen-sm-min) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .branch {
+        @media (min-width: @screen-sm-min) {
+            flex: 0 0 30%;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+        }
+    }
+}
+
+// Contact page
+
+.form-section {
+    @media (min-width: @screen-sm-min) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form {
+        text-align: left;
+        @media (min-width: @screen-sm-min) {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+    }
+
+    .details {
+        text-align: left;
+        @media (min-width: @screen-sm-min) {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+    }
+
+    .form-control {
+        margin: 0 0 20px 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.services-list {
+    column-count: 2;
+    column-gap: 40px;
+    margin: 0 auto;
+    padding-left: 0;
+    display: inline-block;
+    width: 80%;
+
+    li {
+        text-align: left;
+    }
+}
+
+
+// Type
 h1, h2, h3, h4, h5 h6 {
     font-family: @primary-font;
     color: @palette-primary;
@@ -374,6 +471,11 @@ p {
     &:first-of-type {
         font-size: 2.4rem;
         line-height: 2.9rem;
+    }
+
+    &.small {
+        font-size: 1.8rem;
+        line-height: @body-line-height;
     }
 }
 
