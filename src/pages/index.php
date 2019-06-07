@@ -35,20 +35,8 @@
                 <div class="constrainer">
                     <h2>Services</h2>
 
-                    <ul class="services-list">
-                        <li>4 Weeks Free Pet Insurance</li>
-                        <li>In House Laboratory</li>
-                        <li>Dental Fac Plus Dental Xray</li>
-                        <li>Full Surgical Facilities</li>
-                        <li>Orthopeadic Surgeon</li>
-                        <li>Ultra Sound</li>
-                        <li>Digital Xray</li>
-                        <li>Endoscopes</li>
-                        <li>Massage Therapist</li>
-                        <li>Nurses Clinics</li>
-                        <li>Weight Clinics</li>
-                        <li>Full Range Of Diet</li>
-                    </ul>
+                    <?php include('includes/services.php'); ?>
+
                     <p class="small">Our out of hours emergencies are covered by the referral centre in godstone who are specialist in
                     emergency medicine. (your call will be automatically be diverted to the out of hours service)
                     </p>

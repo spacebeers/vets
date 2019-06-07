@@ -1,5 +1,6 @@
 <?php
     global $page;
+    global $parent;
 
     return (object) array(
         'target' => 'copthornevetclinic.co.uk',
@@ -18,6 +19,7 @@
         'saturday' => '08:30 - 12:00',
         'sunday' => 'Closed',
         'notes' => '* Closed 13:00 - 14:00',
-        'trackingID' => 'UA-3539496-10'
+        'trackingID' => 'UA-3539496-10',
+        'mapCode' => '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFy8I7eHwdUgRJPoi5WmMl9A&key=AIzaSyDH5KvEg6W2kZcjj4FI3_8bQvRIUiKQQII" allowfullscreen></iframe>'
     );
 ?>

@@ -1,5 +1,6 @@
 <?php
     global $page;
+    global $parent;
 
     return (object) array(
         'target' => 'crawleyvetclinic.co.uk',
@@ -18,6 +19,7 @@
         'saturday' => '08:30 - 12:00',
         'sunday' => 'Closed',
         'notes' => '* Closed 12:30 - 13:30',
-        'trackingID' => 'UA-3539496-9'
+        'trackingID' => 'UA-3539496-9',
+        'mapCode' => '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=crawley+vet+clinic&key=AIzaSyDH5KvEg6W2kZcjj4FI3_8bQvRIUiKQQII" allowfullscreen></iframe>'
     );
 ?>

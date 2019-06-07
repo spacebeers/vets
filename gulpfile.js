@@ -47,6 +47,13 @@ gulp.task('assets', function () {
     .pipe(gulp.dest(`./dist/${theme.target}/assets`));
 });
 
+gulp.task('icons', function () {
+  return gulp.src([
+      './src/icons/**/*'
+    ])
+    .pipe(gulp.dest(`./dist/${theme.target}/icons`));
+});
+
 gulp.task('javascript', function () {
   return gulp.src([
       './src/js/**/*'
@@ -62,4 +69,4 @@ gulp.task('less', function () {
 });
 
 
-gulp.task('default', ['pages', 'partials', 'config', 'assets', 'javascript', 'less'])
+gulp.task('default', ['pages', 'partials', 'config', 'assets', 'icons', 'javascript', 'less'])

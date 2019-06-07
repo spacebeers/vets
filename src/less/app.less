@@ -32,13 +32,75 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
+
+    &.open {
+        .navigation {
+            display: block;
+            opacity: 1;
+        }
+    }
 }
 
 header {
+    position: relative;
     border-bottom: 5px solid @palette-primary;
     @media (min-width: @screen-sm-min) {
         border-bottom: none;
     }
+}
+
+#close {
+    display: none;
+    position: fixed;
+    top: 36px;
+    right: 10px;
+    z-index: 4;
+    width: 36px;
+    height: 36px;
+    color: white;
+
+    svg {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.navigation {
+    @media (max-width: @screen-xs-max) {
+        overflow: auto;
+        background: fade(#111, 80%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        padding: 60px 30px;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+
+        #close {
+            display: block;
+        }
+    }
+}
+
+.menu-button {
+    @media (min-width: @screen-sm-min) {
+        display: none;
+    }
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    color: @palette-primary;
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    z-index: 1;
 }
 
 .constrainer {
@@ -52,32 +114,79 @@ header {
 }
 
 .navigation {
-    margin-bottom: 25px;
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 25px;
+    }
 
     ul {
-        display: flex;
-        justify-content: center;
+        @media (min-width: @screen-sm-min) {
+            display: flex;
+            justify-content: center;
+        }
         list-style: none;
         margin: 0;
         padding: 0;
 
         li {
-            margin: 0 3.5rem;
+            position: relative;
+            margin: 25px 0;
+            @media (min-width: @screen-sm-min) {
+                margin: 0 3.5rem;
+            }
 
             ul {
-                display: none;
+                @media (max-width: @screen-xs-max) {
+                    display: block;
+                    border-top: 1px solid white;
+                    border-bottom: 1px solid white;
+                    padding: 0;
+                    margin: 20px 0;
+                }
+
+                @media (min-width: @screen-sm-min) {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    z-index: 1;
+                    transform: translateX(-50%);
+                    background: @palette-lightest;
+                    padding: 2px;
+                    min-width: 200px;
+                    border-radius: 3px;
+                    border: 1px solid darken(@palette-primary-dark, 20%);
+                    box-shadow: 0px 1px 2px 1px fade(@palette-primary-dark, 20%);
+                }
+
+                li {
+                    @media (min-width: @screen-sm-min) {
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            &:hover {
+                ul {
+                    display: block;
+                }
             }
         }
 
         a {
-            color: @palette-body;
+            color: @palette-lightest;
+            font-size: 3.6rem;
+            @media (min-width: @screen-sm-min) {
+                color: @palette-body;
+                font-size: 1.8rem;
+            }
             text-transform: uppercase;
-            font-size: 1.8rem;
         }
 
         .selected {
-            a {
-                color: @palette-primary;
+            & > a {
+                @media (min-width: @screen-sm-min) {
+                    color: @palette-primary;
+                }
                 text-decoration: underline;
             }
         }
@@ -104,6 +213,7 @@ header {
 }
 
 .logo {
+    display: inline-block;
     font-family: @primary-font;
     padding: 20px 0 25px 0;
     @media (min-width: @screen-sm-min) {
@@ -371,12 +481,62 @@ header {
             list-style: none;
             text-align: left;
         }
+
+        li {
+            margin: 9px 0;
+        }
+
+        a {
+            position: relative;
+            padding-left: 30px;
+            color: @palette-body;
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+.icon-link {
+    position: relative;
+    padding-left: 30px;
+    color: @palette-body;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 
 // Contact page
+.details {
+    ul {
+        list-style: none;
+
+        li {
+            margin: 9px 0;
+        }
+    }
+}
+
+.alert {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
 
 .form-section {
+    margin-top: 40px;
+
     @media (min-width: @screen-sm-min) {
         display: flex;
         justify-content: space-between;
@@ -409,16 +569,36 @@ header {
     input, textarea {
         width: 100%;
         padding: 15px;
+        border: 2px solid @palette-primary;
+    }
+
+    .button {
+        background: @palette-primary-dark;
+        border-radius: 3px;
+        padding: 4px 20px;
+        display: inline-block;
+        line-height: @body-line-height;
+        border: 1px solid darken(@palette-primary-dark, 20%);
+        outline: none;
+        color: @palette-lightest;
+        cursor: pointer;
+    }
+}
+
+.services-lists {
+    padding-bottom: 20px;
+    @media (min-width: @screen-sm-min) {
+        display: flex;
     }
 }
 
 .services-list {
-    column-count: 2;
-    column-gap: 40px;
     margin: 0 auto;
-    padding-left: 0;
-    display: inline-block;
-    width: 80%;
+    display: block;
+    @media (min-width: @screen-sm-min) {
+        display: inline-block;
+        padding-left: 0;
+    }
 
     li {
         text-align: left;
@@ -450,8 +630,18 @@ h2 {
     font-size: 2.0rem;
     line-height: 2.5rem;
     @media (min-width: @screen-sm-min) {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
         line-height: 2.9rem;
+    }
+    .header-dash();
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    @media (min-width: @screen-sm-min) {
+        font-size: 2.0rem;
+        line-height: 2.5rem;
     }
     .header-dash();
 }
@@ -474,7 +664,7 @@ p {
     }
 
     &.small {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: @body-line-height;
     }
 }

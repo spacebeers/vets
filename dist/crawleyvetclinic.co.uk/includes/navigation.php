@@ -14,12 +14,14 @@
                 [
                     "title" => "Our history",
                     "url" => "history.php",
-                    "id" => "history"
+                    "id" => "history",
+                    "parent" => "about"
                 ],
                 [
                     "title" => "What makes us different",
                     "url" => "what-makes-us-different.php",
-                    "id" => "different"
+                    "id" => "different",
+                    "parent" => "about"
                 ]
             ]
         ],
@@ -38,10 +40,10 @@
     ];
 ?>
 
-<nav class="navigation">
+<nav class="navigation" id="main-menu">
     <ul>
         <?php foreach($menu as $item): ?>
-            <li <?php if ($page == $item['id']): echo 'class="selected"'; endif; ?>>
+            <li <?php if ($page == $item['id'] || $parent == $item['id']): echo 'class="selected"'; endif; ?>>
                 <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
 
                 <?php if ($item['pages']): ?>
@@ -56,4 +58,8 @@
             </li>
         <?php endforeach; ?>
     </ul>
+
+    <button aria-label="Click to close menu" class="menu-button" id="close">
+        <?php echo file_get_contents("icons/close.svg"); ?>
+    </button>
 </nav>

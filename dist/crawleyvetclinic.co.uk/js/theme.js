@@ -31,4 +31,14 @@
                 target.setAttribute("aria-hidden", "true");
         });
     });
+
+    var nav = document.querySelector('#nav');
+    nav.addEventListener('click', function (e) {
+        document.body.classList.add('open')
+    })
+
+    var close = document.querySelector('#close');
+    close.addEventListener('click', function (e) {
+        document.body.classList.remove('open')
+    })
 }());

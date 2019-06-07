@@ -21,14 +21,19 @@
             </a>
         </div>
     </div>
+
+    <button aria-label="Click to open menu" class="menu-button" id="nav">
+        <?php echo file_get_contents("icons/menu.svg"); ?>
+    </button>
+
     <div class="container" aria-label="<?php echo $contents->name; ?>">
-        <div class="logo" aria-hidden="true">
+        <a href="index.php" class="logo" aria-hidden="true">
             <p class="top">
                 <?php echo $contents->logoTop; ?>
             </p>
             <p class="bottom">
                 <?php echo $contents->logoBottom; ?>
             </p>
-        </div>
+        </a>
     </div>
 </header>

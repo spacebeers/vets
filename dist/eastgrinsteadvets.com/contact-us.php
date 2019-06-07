@@ -1,5 +1,22 @@
 <?php
     $contents = include('includes/config.php');
+    $successMessage = "";
+
+    if (isset($_POST['submit'])):
+        $to = $contents->email;
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $subject = "New website enquiry";
+        $message = $name . " has sent a new website enquiry." . "\n\nMessage: \"" . $_POST['message'] . "\"\nEmail: " . $email . "\nPhone: " . $phone;
+        $headers = "From:" . $email;
+        if (mail($to,$subject,$message,$headers)):
+            $successMessage = "Thank you for your enquire. We will be in touch as soon as possible";
+        else:
+            $successMessage = "Sorry there has been a problem. Please call us on " . $contents->phone;
+        endif;
+    endif;
+
     $page = 'contact';
 ?>
 
@@ -23,39 +40,47 @@
 
                     <p>Consultations available by appointment only. Free parking on site.</p>
 
+                    <?php if (isset($_POST['submit']) && $successMessage != ""): ?>
+                        <div class="alert">
+                            <?php echo $successMessage; ?>
+                        </div>
+                    <?php endif; ?>
+
                     <div class="form-section">
                         <div class="form">
-                            <form action="" method="POST">
+                            <form action="contact-us.php" method="POST">
                                 <div class="form-control">
                                     <label for="name">Name</label>
-                                    <input type="text" required id="name" name="name" />
+                                    <input required type="text" required id="name" name="name" />
                                 </div>
                                 <div class="form-control">
                                     <label for="email">Email address</label>
-                                    <input type="email" required id="email" name="email" />
+                                    <input required type="email" required id="email" name="email" />
                                 </div>
                                 <div class="form-control">
                                     <label for="phone">Telephone number</label>
-                                    <input type="number" required id="phone" name="phone" />
+                                    <input required type="number" required id="phone" name="phone" />
                                 </div>
                                 <div class="form-control">
                                     <label for="message">Message</label>
-                                    <textarea name="" id="message" name="message" cols="30" rows="10"></textarea>
+                                    <textarea id="message" name="message" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-control">
-                                    <input type="submit" value="Send" />
+                                    <input required type="submit" name="submit" class="button" value="Send" />
                                 </div>
                             </form>
                         </div>
                         <div class="details">
                             <ul>
                                 <li>
-                                    <a href="tel:<?php echo $contents->phone; ?>" class="telephone-link">
+                                    <a class="icon-link" href="tel:<?php echo $contents->phone; ?>">
+                                        <?php echo file_get_contents("icons/phone.svg"); ?>
                                         <?php echo $contents->phone; ?>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:<?php echo $contents->email; ?>" class="email-link">
+                                    <a class="icon-link" href="tel:<?php echo $contents->email; ?>">
+                                        <?php echo file_get_contents("icons/email.svg"); ?>
                                         <?php echo $contents->email; ?>
                                     </a>
                                 </li>

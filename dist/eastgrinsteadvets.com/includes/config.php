@@ -1,5 +1,6 @@
 <?php
     global $page;
+    global $parent;
 
     return (object) array(
         'target' => 'eastgrinsteadvets.com',
