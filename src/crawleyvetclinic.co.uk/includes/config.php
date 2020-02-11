@@ -5,7 +5,7 @@
     return (object) array(
         'target' => 'crawleyvetclinic.co.uk',
         'phone' => '01293 539898',
-        'email' => 'evgh@hotmail.co.uk',
+        'email' => 'egvh@hotmail.co.uk',
         'facebook' => '//www.facebook.com/eastgrinsteadvetcentre/',
         'name' => 'Crawley Veterinary Clinic',
         'logoTop' => 'Crawley',
