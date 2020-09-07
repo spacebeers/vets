@@ -5,7 +5,7 @@
     return (object) array(
         'target' => 'eastgrinsteadvets.com',
         'phone' => '01342 323072',
-        'email' => 'evgh@hotmail.co.uk',
+        'email' => 'egvh@hotmail.co.uk',
         'facebook' => '//www.facebook.com/eastgrinsteadvetcentre/',
         'name' => 'East Grinstead Veterinary Centre',
         'logoTop' => 'East Grinstead',

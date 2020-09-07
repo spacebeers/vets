@@ -5,7 +5,7 @@
     return (object) array(
         'target' => 'copthornevetclinic.co.uk',
         'phone' => '01342 713957',
-        'email' => 'evgh@hotmail.co.uk',
+        'email' => 'egvh@hotmail.co.uk',
         'facebook' => '//www.facebook.com/eastgrinsteadvetcentre/',
         'name' => 'Copthorne Veterinary Clinic',
         'logoTop' => 'Copthorne',

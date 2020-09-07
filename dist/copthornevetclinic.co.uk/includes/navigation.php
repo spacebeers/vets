@@ -26,6 +26,12 @@
             ]
         ],
         [
+            "title" => "News",
+            "url" => "news.php",
+            "id" => "news",
+            "pages" => []
+        ],
+        [
             "title" => "Services",
             "url" => "services.php",
             "id" => "services",
